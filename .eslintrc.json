@@ -24,9 +24,14 @@
     "prettier"
   ],
   "rules": {
-    "indent": [
-      "error",
-      2
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
     ],
     "linebreak-style": [
       "error",
