@@ -1,8 +1,13 @@
+import { About } from './components/About';
+import { Home } from './components/Home';
+import { Projects } from './components/Projects';
+
 export function App() {
   return (
-    <main>
-      <h1>Portifolio</h1>
-      <h3>Hello World ...</h3>
+    <main className='w-screen bg-opaced-100'>
+      <Home />
+      <About />
+      <Projects />
     </main>
   );
 }
