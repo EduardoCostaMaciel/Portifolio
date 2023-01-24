@@ -10,11 +10,11 @@ module.exports = {
         primary: {
           100: '#1f1f38',
           200: '#2c2c6c',
-          300: '#4187f6'
-        }
+          300: '#4187f6',
+        },
       },
       width: {
-        70: '70%'
+        70: '70%',
       },
     },
     container: {
@@ -22,4 +22,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
