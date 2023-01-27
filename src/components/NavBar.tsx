@@ -28,10 +28,10 @@ export function NavBar() {
       <section
         id='pages'
         className='
-          py-2 px-2
-          flex flex-grow justify-around
-          bg-opaced-100
-          md:px-2 md:py-8 md:flex-col md:justify-start md:gap-y-4 md:gap-x-0
+        py-2 px-2
+        flex flex-grow justify-around
+        bg-opaced-100
+        md:px-2 md:py-8 md:flex-col md:justify-start md:gap-y-4 md:gap-x-0
         '
       >
         {/* HOME */}
@@ -39,12 +39,16 @@ export function NavBar() {
           href='#home'
           className='flex focus:outline-none focus:ring-2 focus:rounded-md focus:ring-zinc-500'
           onClick={() => setIsSectionNavActive('#home')}
-        // onClick={() => handleClick('#home', 'Home')}
-
         >
           <House
             size={44}
-            className={`${isSectionNavActive === '#home' ? 'text-primary-300' : 'text-primary-200'} hover:p-0.5`}
+            className={`
+              ${isSectionNavActive === '#home'
+                ? 'text-primary-300 rounded-lg border border-primary-200 shadow shadow-primary-300'
+                : 'text-primary-200'
+              }
+              hover:p-0.5
+            `}
           />
           {/* Home */}
         </a>
@@ -53,12 +57,16 @@ export function NavBar() {
           href='#about'
           className='flex focus:outline-none focus:ring-2 focus:rounded-md focus:ring-zinc-500'
           onClick={() => setIsSectionNavActive('#about')}
-        // onClick={() => handleClick('#about', 'About')}
         >
           <User
             size={44}
             className={`
-              ${isSectionNavActive === '#about' ? 'text-primary-300' : 'text-primary-200'} hover:p-0.5`}
+              ${isSectionNavActive === '#about'
+                ? 'text-primary-300 rounded-lg border border-primary-200 shadow shadow-primary-300'
+                : 'text-primary-200'
+              }
+              hover:p-0.5
+            `}
           />
           {/* About */}
         </a>
@@ -67,12 +75,16 @@ export function NavBar() {
           href='#projects'
           className='flex focus:outline-none focus:ring-2 focus:rounded-md focus:ring-zinc-500'
           onClick={() => setIsSectionNavActive('#projects')}
-        // onClick={() => handleClick('#projects', 'Projects')}
-
         >
           <Briefcase
             size={44}
-            className={`${isSectionNavActive === '#projects' ? 'text-primary-300' : 'text-primary-200'} hover:p-0.5`}
+            className={`
+              ${isSectionNavActive === '#projects'
+                ? 'text-primary-300 rounded-lg border border-primary-200 shadow shadow-primary-300'
+                : 'text-primary-200'
+              }
+              hover:p-0.5
+            `}
           />
           {/* Projects */}
         </a>
