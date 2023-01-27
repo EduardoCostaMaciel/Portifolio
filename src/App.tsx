@@ -1,10 +1,12 @@
-import { About } from './components/About';
-import { Home } from './components/Home';
-import { Projects } from './components/Projects';
+import { NavBar } from './components/NavBar';
+import { Home } from './pages/Home';
+import { About } from './pages/About';
+import { Projects } from './pages/Projects';
 
 export function App() {
   return (
-    <main className='w-screen bg-opaced-100'>
+    <main className='relative w-screen flex flex-col items-center justify-center'>
+      <NavBar />
       <Home />
       <About />
       <Projects />
