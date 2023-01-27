@@ -23,3 +23,10 @@ module.exports = {
   },
   plugins: [],
 };
+
+// border legal
+// rounded-lg
+// border
+// border-primary-200
+// shadow-md
+// shadow-primary-100
