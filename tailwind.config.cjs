@@ -16,6 +16,14 @@ module.exports = {
       width: {
         70: '70%',
       },
+      rotate: {
+        5: '5deg',
+        10: '10deg',
+        14: '14deg',
+        16: '16deg',
+        18: '18deg',
+        20: '20deg',
+      },
     },
     container: {
       center: true,
