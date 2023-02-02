@@ -12,12 +12,17 @@ module.exports = {
           200: '#2c2c6c',
           300: '#4187f6',
         },
+        trybeTextColor: {
+          100: '#065220',
+        },
       },
       width: {
         70: '70%',
+        '35vw': '35vw',
       },
       rotate: {
         5: '5deg',
+        8: '8deg',
         10: '10deg',
         14: '14deg',
         16: '16deg',
