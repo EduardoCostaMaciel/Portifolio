@@ -8,8 +8,10 @@ import {
   LinkedinLogo,
 } from 'phosphor-react';
 
+import * as Routes from '../utils/routes';
+
 export function NavBar() {
-  const [isSectionNavActive, setIsSectionNavActive] = useState('#home');
+  const [isSectionNavActive, setIsSectionNavActive] = useState(Routes.HOME);
 
   return (
     <nav
@@ -36,14 +38,14 @@ export function NavBar() {
       >
         {/* HOME */}
         <a
-          href='#home'
+          href={Routes.HOME}
           className='flex focus:outline-none focus:ring-2 focus:rounded-md focus:ring-zinc-500'
           onClick={() => setIsSectionNavActive('#home')}
         >
           <House
             size={44}
             className={`
-              ${isSectionNavActive === '#home'
+              ${isSectionNavActive === Routes.HOME
                 ? 'text-primary-300 rounded-lg border border-primary-200 shadow shadow-primary-300'
                 : 'text-primary-200'
               }
@@ -54,14 +56,14 @@ export function NavBar() {
         </a>
         {/* ABOUT */}
         <a
-          href='#about'
+          href={Routes.ABOUT}
           className='flex focus:outline-none focus:ring-2 focus:rounded-md focus:ring-zinc-500'
           onClick={() => setIsSectionNavActive('#about')}
         >
           <User
             size={44}
             className={`
-              ${isSectionNavActive === '#about'
+              ${isSectionNavActive === Routes.ABOUT
                 ? 'text-primary-300 rounded-lg border border-primary-200 shadow shadow-primary-300'
                 : 'text-primary-200'
               }
@@ -72,14 +74,14 @@ export function NavBar() {
         </a>
         {/* PROJECTS */}
         <a
-          href='#projects'
+          href={Routes.PROJECTS}
           className='flex focus:outline-none focus:ring-2 focus:rounded-md focus:ring-zinc-500'
           onClick={() => setIsSectionNavActive('#projects')}
         >
           <Briefcase
             size={44}
             className={`
-              ${isSectionNavActive === '#projects'
+              ${isSectionNavActive === Routes.PROJECTS
                 ? 'text-primary-300 rounded-lg border border-primary-200 shadow shadow-primary-300'
                 : 'text-primary-200'
               }
@@ -93,7 +95,7 @@ export function NavBar() {
 
         {/* GITHUB */}
         <a
-          href='https://github.com/EduardoCostaMaciel'
+          href={Routes.USER_GITHUB_REPO}
           target='_blank'
           rel='noreferrer'
           className='
@@ -105,7 +107,7 @@ export function NavBar() {
         </a>
         {/* LINKDIN */}
         <a
-          href='https://www.linkedin.com/in/eduardocostamaciel/'
+          href={Routes.USER_LINKDIN_PAGE}
           target='_blank'
           rel='noreferrer'
           className='focus:outline-none focus:ring-2 focus:rounded-md focus:ring-zinc-500'
