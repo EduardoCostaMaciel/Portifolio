@@ -18,7 +18,26 @@ module.exports = {
       },
       width: {
         70: '70%',
+        '20vw': '20vw',
+        '25vw': '25vw',
+        '30vw': '30vw',
         '35vw': '35vw',
+        '60vw': '60vw',
+        '70vw': '70vw',
+        '80vw': '80vw',
+        '90vw': '90vw',
+      },
+      height: {
+        '50vh': '50vh',
+        '60vh': '60vh',
+      },
+      maxWidth: {
+        '50vw': '50vw',
+        '60vw': '60vw',
+      },
+      maxHeight: {
+        '50vh': '50vh',
+        '60vh': '60vh',
       },
       rotate: {
         5: '5deg',

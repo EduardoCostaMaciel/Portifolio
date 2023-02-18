@@ -20,7 +20,7 @@ export function About() {
         <div className='bg-opaced-100 -rotate-2 border border-primary-200 rounded-3xl shadow shadow-primary-100'>
           <img
             src={me}
-            alt='xxxxxxx'
+            alt='Imagem do Eduardo Costa Maciel'
             className='h-72 bg-primary-200 rotate-8 transition-all ease-linear duration-300 rounded-3xl shadow shadow-primary-100 sm:h-80 md:hover:rotate-0'
           />
         </div>

@@ -1,3 +1,17 @@
+## Portifólio
+
+### Tecnologias usadas
+  - React.js
+  - TypeScript
+
+  - Estilos
+    - Tailwindcss
+    - Phosphor-react
+
+  - Linter
+    - Eslint
+    - Prettier
+
 ## eslint
 - npm i eslint -D
   - npx eslint --init
