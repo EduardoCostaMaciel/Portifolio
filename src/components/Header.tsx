@@ -1,20 +1,15 @@
-interface IPropsHeader {
-  text: string;
-}
+import { MobileMenu } from './MobileMenu';
+import { Nav } from './Nav';
+import { SocialNetworks } from './SocialNetworks';
 
-export function Header({ text }: IPropsHeader) {
+export function Header() {
   return (
-    <header
-      className='
-        relative
-        w-full
-        top-0 px-2 py-2
-        flex items-center justify-between
-        text-primary-300
-        transition-all ease-out duration-1000
-      '
-    >
-      <h1 className='text-lg bg-opaced-100 px-2 py-1 rounded-lg'>{text}</h1>
+    <header className='fixed top-0 z-50 flex h-12 w-full justify-between bg-gray-800 px-4 transition-all duration-700 ease-out sm:px-20'>
+      <Nav position='items-end' />
+      <SocialNetworks />
+
+      <MobileMenu />
+      <hr className='absolute left-1/2 bottom-0 -mb-1 w-11/12 -translate-x-1/2 border-t-4 border-gray-600' />
     </header>
   );
 }
