@@ -6,7 +6,7 @@ import { Projects } from './pages/Projects';
 
 export function App() {
   return (
-    <main className='relative flex w-screen flex-col items-center justify-center gap-10 bg-primary-1 text-white'>
+    <main className='relative flex w-screen flex-col items-center justify-center gap-8 bg-primary-1 text-white'>
       <PagesContextProvider>
         <Header />
         <Home />
