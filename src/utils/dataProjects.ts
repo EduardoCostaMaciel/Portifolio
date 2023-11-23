@@ -1,4 +1,4 @@
-import imgAppRecipes from '../assets/images/appRecipes_2.png';
+import imgAppRecipes from '../assets/images/appRecipes.png';
 
 export const dataProjects = {
   id: 'projects',
