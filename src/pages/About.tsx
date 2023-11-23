@@ -1,52 +1,62 @@
-import { Header } from '../components/Header';
+import { useState } from 'react';
+
 import me from '../assets/images/me.png';
 
 export function About() {
-  const titlePage = 'About';
+  const [showFullText, setShowFullText] = useState(false);
+
   return (
-    <section
-      id='about'
-      className='
-        w-full
-        min-h-screen
-        flex flex-col items-center
-        bg-primary-200
-        text-zinc-400
-        transition-all ease-out duration-700
-      '
-    >
-      <Header text={titlePage} />
-      <article className='w-11/12 my-8 flex flex-col flex-grow items-center justify-center gap-10 md:flex-row '>
-        <div className='bg-opaced-100 -rotate-2 border border-primary-200 rounded-3xl shadow shadow-primary-100'>
+    <>
+      <hr
+        id='about'
+        className='w-11/1'
+      />
+      <section className='flex min-h-screen w-full items-center justify-center text-zinc-300 md:h-60'>
+        <div className='flex w-11/12 flex-col items-center justify-center gap-4 border border-zinc-900 bg-black bg-opacity-10 p-4 shadow-md backdrop-blur-sm transition-all duration-700 ease-out md:px-16 lg:flex-row lg:py-0 lg:px-10'>
           <img
             src={me}
-            alt='xxxxxxx'
-            className='h-72 bg-primary-200 rotate-8 transition-all ease-linear duration-300 rounded-3xl shadow shadow-primary-100 sm:h-80 md:hover:rotate-0'
+            alt='Foto de Eduardo Costa'
+            className='h-72 lg:h-[30rem]'
           />
-        </div>
-        <div className='p-2 text-center md:w-35vw'>
-          <p>
-            Eu me chamo Eduardo Costa, tenho 32 anos, meus hobbies favoritos são
-            assistir séries e games, sou muito grato pelo dia de hoje pois ele
-            moldará o meu amanhã.
-          </p>
-          <br />
-          <p>
-            Me formei em desenvolvimento de software na
-            <a
-              className='text-trybeTextColor-100 font-bold'
-              href='https://www.betrybe.com/'
-              target='_blank'
-              rel='noopener noreferrer'
+          <div className='flex flex-col items-center justify-center text-center text-lg lg:h-[26rem] lg:w-[36rem]'>
+            <p>
+              Meu nome é Eduardo Costa, e sou um entusiasta de tecnologia com
+              uma paixão por desenvolvimento de software. Conquistei meu diploma
+              em Desenvolvimento de Software pela
+              <a
+                className='font-bold text-emerald-700 hover:text-white'
+                href='https://www.betrybe.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                {' '}
+                Trybe
+              </a>{' '}
+              | Escola de Programação Online, onde adquiri habilidades sólidas e
+              conhecimento em programação web.
+            </p>
+            <p
+              className={
+                showFullText ? 'h-auto' : 'h-0 overflow-hidden md:h-6 lg:h-20'
+              }
             >
-              {' '}
-              Trybe
-            </a>{' '}
-            | Escola de Programação Online, busco por oportunidades de iniciar
-            minha carreira como desenvolvedor.
-          </p>
+              Estou no início da minha carreira como desenvolvedor e estou
+              animado para explorar novas oportunidades e desafios. Comprometido
+              em aprender continuamente e aprimorar minhas habilidades para
+              contribuir de forma significativa em projetos futuros e ansioso
+              para fazer parte de projetos empolgantes e ajudar a transformar
+              ideias em realidade por meio da programação.
+            </p>
+
+            <button
+              onClick={() => setShowFullText(!showFullText)}
+              className='mt-2 cursor-pointer px-2 font-medium text-secondary-2 hover:text-white'
+            >
+              {!showFullText ? '... mais' : 'menos ...'}
+            </button>
+          </div>
         </div>
-      </article>
-    </section>
+      </section>
+    </>
   );
 }
